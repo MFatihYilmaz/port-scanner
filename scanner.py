@@ -50,7 +50,7 @@ def getbanner(ip,port):
             print(f"--->{ans.decode('utf-8')}")
         s.close()
     except Exception:
-        print("Banner Bilgisi yok")
+        print("Error Occured")
         pass
         s.close()
 
@@ -77,7 +77,6 @@ while True:
     port=input("Please type port or port range ex:'10-20 range or a port 50-':")
     patt=r"([0-9]+)-([0-9]+)"
     ports=re.findall(patt,port)
-    print(ports)
     if(len(ports)!=0):
     
         if((int(ports[0][0]))>65535 or (int(ports[0][1])>65535)):
